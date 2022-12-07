@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+
+    function exerc1 () {
+        var num1 = Number.parseInt(window.prompt("Digite o primeiro numero"));
+        var num2 = Number.parseInt(window.prompt("digite o segundo número"));
+        var num3 = Number.parseInt(window.prompt("digite o terceiro número"));
+
+        if(num1>num2 && num1>num3) {
+            document.write("<br> O maior valor é num1: " + num1); 
+        }
+        if (num2>num1 && num2>num3)  {
+            document.write("<br> O maior valor é num2:" + num2); 
+        } 
+        if (num3>num1 && num3>num2)  {
+            document.write("<br> O maior valor é num3:" + num3); 
+        }        
+    }
+
+    function exerc2() {
+
+        var i= 1;
+        while(i<=10) {
+            var num1 = Number.parseInt(window.prompt("Digite o " + i + "º numero:"));
+            if(num1 > maior) {
+                maior = num1;
+            }
+            i++;  // i=i+1 
+        }
+        document.write("<br> o maior é: " + maior);
+    }
+
+    function exerc3() {
+        var limite = Number.parseInt(window.prompt("Digite a quantidade"));
+
+        var maior = 0;
+        var menor = 9999999;
+        var i= 1;
+        while(i<=limite) {
+            var num1 = Number.parseInt(window.prompt("Digite o " + i + "º numero:"));
+            if(num1 > maior) {
+                maior = num1;
+            }
+            if(num1 < menor) {
+                menor = num1;
+            }
+            i++;  // i=i+1 
+         }
+
+        document.write("<br> o maior é: " + maior);
+        document.write("<br> o menor é: " + menor);
+    }
+
+    function exerc4() {
+        var limite = Number.parseInt(window.prompt("Digite a quantidade"));
+
+        var num = new Array();
+        var i= 0;
+        while(i<limite) {
+            num[i] = window.prompt("Digite o " + (i+1) + "º numero:");
+            i++;
+        }
+
+        i=0;
+        while(i<limite) {
+            document.write("<bR>posicao " + i + " : " + num[i]);
+            i++;
+        }
+  
+        document.write("<bR><br> reverso ");
+        
+        i=limite-1;
+        while(i>=0) {
+            document.write("<bR>posicao " + i + " : " + num[i]);
+            i--;
+        }
+   }
+  function selectExercicio() {
+            num = Number.parseInt(window.prompt("Escolha o exercício \n 1. Mostra o maior número entre 10 \n 2. Mostrar o maior e menor de N números \n 3. Exibir números em ordem inversa dos digitados"))
+
+            switch (num) {
+                case 1:
+                    exerc2()
+                    break;
+                case 2:
+                    exerc3()
+                    break;
+                case 3:
+                    exerc4()
+                    break;
+                default:
+                window.prompt("Nenhuma opção escolhida!")
+            }
+        }
+        selectExercicio()
+    </script>
+</body>
+</html>

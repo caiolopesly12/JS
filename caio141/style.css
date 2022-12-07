@@ -1,0 +1,14 @@
+body {
+    background-color: gray;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+fieldset{
+    text-align: center;
+    color: rgb(255, 255, 255);
+    margin-left: 40%;
+    margin-right: 40%;
+    margin-top: 7%;
+    border-color: rgb(97, 97, 97);
+    border-style: double;
+    border-radius: 10px;
+}
