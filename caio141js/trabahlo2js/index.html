@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programa 2</title>
+</head>
+<body>
+    <script>
+        //declarar num como um array
+        var num = []
+        var q =  Number.parseInt(window.prompt("Digite a quantidade de numeros"))
+
+        var i = 0 
+        while (i < q){
+            var n = Number.parseInt(window.prompt("Digite o valor"))
+            num[i] = n
+            i++
+        }
+        maiorNumero = 0
+        for( let i = 0; i < numeros.length; i++){
+            if (num[i] > maiornumero) {
+                maiorNumero = num[i]
+            }
+        }
+        var menorNumero = maiorNumero
+        for( let i = 0; i < numeros.length; i++){
+            if (num[i] < menosNumero) {
+                menorNumero = num[i]
+            }
+        }
+        if(maiorNumero == 0) {
+            maiorNumero == menorNumero
+            for( let i = 0; i < numeros.length; i++){
+                if (num[i] > maiornumero) {
+                    maiorNumero = num[i]
+                }
+            }
+        }
+        var soma = 0
+        for( let i = 0; i < numeros.length; i++){
+            if (num[i] > 0){
+             soma += num[i]
+            }
+        }
+        window.alert("A soma dos numeros digitados é "+ soma)
+
+
+    </script>
+
+</body>
+</html>
