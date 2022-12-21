@@ -4,34 +4,38 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Programa 1</title>
+    <title>Calculador de Àreas e volumes</title>
 </head>
 <body>
     <script>
+        //CALCULO DA ÁREA DO TRIÂNGULO
         function triangulo() {
-         var l = Number.parseInt(window.prompt ("Digite o lado:"))   
-         var h = Number.parseInt(window.prompt ("Digite a Altura"))
+         var b = Number.parseInt(window.prompt ("Digite o base:"))   
+         var h = Number.parseInt(window.prompt ("Digite a Altura:"))
 
-         var a = l * h /2
+         var a = b * h /2
 
          document.write("A área do triângulo é: " + a + "cm²")
         }
 
+        //CALCULO DO VOLUME DA PIRÂMIDE
         function piramide() {
          var l = Number.parseInt(window.prompt ("Digite o lado:"))   
-         var h = Number.parseInt(window.prompt ("Digite a Altura"))
+         var h = Number.parseInt(window.prompt ("Digite a Altura:"))
 
-         var v = l * h /3
+         var a = l * l
+         var v = a * h /3
 
-         document.write("O volume da pirâmide é: " + v + "cm²")
+         document.write("O volume da pirâmide é: " + v + "cm³")
         }
 
+        //CALCULO DO VOLUME DA ESFERA
         function esfera() {
          var r = Number.parseInt(window.prompt ("Digite o raio:"))   
 
-         var valor = ((r ** 3) * 4) / 3
+         var v = (4 * (r ** 3)) / 3
 
-         document.write("O volume da esfera é: " + valor + "π cm³")
+         document.write("O volume da esfera é: " + v + "π cm³")
         }
 
         var op = Number.parseInt(window.prompt("Escolha uma opção \n 1.Calcular área do triângulo \n 2.Calcular volume da pirâmide \n 3. Calcular volume da esfera"))
@@ -46,7 +50,8 @@
             case 3:
                 esfera()
                 break;
-
+            default:
+            window.alert("Valor escolhido inválido")
 
         }
 

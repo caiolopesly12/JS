@@ -8,43 +8,70 @@
 </head>
 <body>
     <script>
-        //declarar num como um array
+        //length é o numero do tamanho do array
+        //ele serve para que o loop passe por todo o array 
+        //ou seja enquanto num<length --> length > 5 , 0 true... 4 true, 5 false
+        //DECLARO QUE NUM É UM ARRAY
         var num = []
+        //VALOR DE NUMEROS QUE TEM QUE DIGITAR
         var q =  Number.parseInt(window.prompt("Digite a quantidade de numeros"))
-
+        //DECLARO QUE i É 0
         var i = 0 
+        //ENQUANTO i FOR MENOR QUE O VALOR x ELE EXECUTARÁ x VEZES (partindo do valor 0)
+        //Exemp: 0:x , 1:y , 2:z
         while (i < q){
             var n = Number.parseInt(window.prompt("Digite o valor"))
             num[i] = n
             i++
         }
-        maiorNumero = 0
-        for( let i = 0; i < numeros.length; i++){
-            if (num[i] > maiornumero) {
+        //=0 POIS TRABALHAMOS COM NUMEROS POSITIVOS
+        //exemp:ele vai verificar cada posição: [1, 5, 3, 2, 4] 1>5 false 5>1 true 3>5 false...4>5 false
+        var maiorNumero = num[0]
+        for( let i = 0; i < num.length; i++){
+            if (num[i] > maiorNumero) {
                 maiorNumero = num[i]
             }
         }
+
+        //menor = maior pois o menor n pode ser maior q o maior
+        //exemp:ele vai verificar cada posição: [1, 5, 3, 2, 4] 1<5? true 5<1 false...3<1 false
         var menorNumero = maiorNumero
-        for( let i = 0; i < numeros.length; i++){
-            if (num[i] < menosNumero) {
+        for( let i = 0; i < num.length; i++){
+            if (num[i] < menorNumero) {
                 menorNumero = num[i]
             }
         }
-        if(maiorNumero == 0) {
-            maiorNumero == menorNumero
-            for( let i = 0; i < numeros.length; i++){
-                if (num[i] > maiornumero) {
-                    maiorNumero = num[i]
-                }
-            }
-        }
+
+        //soma o valor de cada  posição com a variavel soma
+        //soma = 0 + numeros i /[1, 5, 3, 2, 4]/exemp: soma:0 + 1 = 1, soma:1 + 5 = 6,soma:6 + 3 = 9...
         var soma = 0
-        for( let i = 0; i < numeros.length; i++){
+        for( let i = 0; i < num.length; i++){
             if (num[i] > 0){
              soma += num[i]
             }
         }
+        //bubble.sort = para receber um array e ordena forma crescente
+        //verifica um numero e o seu sucessor, se o numero anterior for maior eles invertem de posição
+        /*O bubble sort é um algoritmo de ordenação que funciona comparando todos os elementos de uma lista 
+        uns com os outros, dois a dois, e trocando-os de lugar caso estejam fora de ordem. Este processo é 
+        repetido até que a lista esteja completamente ordenada.*/
+        let aux;
+
+        for( let i = 0; i < num.length; i++){
+            for (let n = 0; n < num.length; n++){
+                if (num[n] > num[n+1]){
+                    aux = num[n]
+                    num[n] = num[n+1]
+                    num[n+1] = aux
+                }
+
+            }
+        }
+
+        window.alert("O maior numero é "+ maiorNumero)
+        window.alert("O menor numero é "+ menorNumero)
         window.alert("A soma dos numeros digitados é "+ soma)
+        window.alert("valores digitados em ordem crescente "+ num)
 
 
     </script>
