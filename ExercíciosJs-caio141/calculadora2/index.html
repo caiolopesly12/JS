@@ -1,0 +1,56 @@
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Calculadora2Js</title>
+</head>
+<body>
+    <script>
+        function delta() {
+            a = calc.a.value
+            b = calc.b.value
+            c = calc.c.value
+            
+          
+          d = calc.d.value = b ** 2 - 4 * a * c
+
+             return false
+        }
+        function x() {
+            delta()
+
+            if (d < 0) {
+                alert("Delta negativo, entãio raiz inválida")
+            } else {
+                calc.x1.value = (-(b) + Math.sqrt(d)) / (2 * a)
+                calc.x2.value = (-(b) - Math.sqrt(d)) / (2 * a)
+            }
+                return false
+        }
+
+    </script>
+    <fieldset>
+        <legend><h1>Calculadora de equação de 2°grau</h1></legend>
+    <form method="POST" name="calc">
+        valor a: <input type="text" name="a">
+        <br>
+        valor b: <input type="text" name="b">
+        <br>
+        valor c: <input type="text" name="c">
+        <br>
+        delta : <input type="text" name="d">
+        <br>
+        x¹ : <input type="text" name="x1">
+        <br>
+        x² : <input type="text" name="x2">
+        <br>
+        <input type="submit"value="delta"onclick="return delta()">
+        <input type="submit"value="x¹ & x²"onclick="return x()">
+        
+    </form>
+    </fieldset>
+    
+</body>
+</html>

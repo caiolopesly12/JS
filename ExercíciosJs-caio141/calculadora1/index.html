@@ -1,0 +1,62 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>CalculadoraJS</title>
+    <script>
+        function op(n) {
+            if(calc.v1.length == 0) {
+                alert("Valor não preenchido")
+                calc.v1.focus()
+            } else if (calc.v2.length == 0){
+                alert("valor não preenchido")
+                calc.v2.focus()
+            } else {
+            var v1 = parseInt(calc.v1.value)
+            var v2 = parseInt(calc.v2.value)
+
+           switch (n) {
+            case'+': 
+            calc.r.value = v1 + v2
+            break;
+            case'-': 
+            calc.r.value = v1 - v2
+            break;
+            case'*': 
+            calc.r.value = v1 * v2
+            break;
+            case'/': 
+            calc.r.value = v1 / v2
+            break;     
+           }
+        }
+        return false
+    }
+        
+    </script>
+</head>
+<body>
+    <fieldset>
+        <legend><h1>꧁Calculadora꧂</h1></legend>
+        <form method="post" name="calc">
+            Valor 1: <input type="text" name="v1"> 
+            <br>
+            Valor 2: <input type="text" name="v2"> 
+            <br>
+            Resposta: 
+            <br>
+            <input type="text" name="r"> 
+            <br>
+            <div class="botao">
+            <input type="submit"value="+"onclick="return op('+')">
+            <input type="submit"value="-"onclick="return op('-')">
+            <input type="submit"value="*"onclick="return op('*')">
+            <input type="submit"value="/"onclick="return op('/')">
+            </div>
+        </form>
+    
+    </fieldset>
+</body>
+</html>
